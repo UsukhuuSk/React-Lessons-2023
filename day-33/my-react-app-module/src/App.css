@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 15vmin;
   pointer-events: none;
 }
 
@@ -14,25 +14,38 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #282c34;
 }
 
 .App-link {
   color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+hr{
+  width: 100%;
+  background-color: #282c34;
+}
+.productno1{
+  display: flex;
+  padding: 30px;
+}
+.rightside{
+  padding-left:20px;
+  font-weight: 500;
+}
+.title{
+  color: #296df5;
+  text-align: start;
+}
+.submit{
+  text-align: start;
+}
+.submit-pic{
+  width: 30px;
+  border-radius: 50%;
+  margin-bottom: -8px;
 }
