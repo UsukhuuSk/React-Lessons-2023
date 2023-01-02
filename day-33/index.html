@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>Day - 33 - ReactJS Introduction</h1>
+
+    <div id="root"></div>
+    <p>Hello</p>
+    <div id="root2"></div>
+    <!-- <select name="cars">
+      <option value="1">Ferrari</option>
+      <option value="2">Lamborghini</option>
+      <option value="3">Aston Martin</option>
+      <option value="4">Mercedes</option>
+    </select> -->
+    <img
+      src="https://64.media.tumblr.com/60c6b3d3e8552a3bd441a6f113a37157/78c6f2971847af09-8a/s540x810/8af5fb9b6e5d4d99e0c282e3dd5d922cca1c4c7a.jpg"
+      alt="noo"
+      width="400px"
+    />
+    <script type="text/babel">
+      // function Hello(){
+      //     return <h1>Hello React</h1>
+      // }
+      // ReactDOM.render(<Hello/>, document.getElementById("root"))
+      //   function Exercise() {
+      //     return <p>Hello</p>;
+      //   }
+      //   ReactDOM.render(<Exercise />, document.getElementById("root"));
+      function Img() {
+        return (
+          <img
+            src="https://64.media.tumblr.com/60c6b3d3e8552a3bd441a6f113a37157/78c6f2971847af09-8a/s540x810/8af5fb9b6e5d4d99e0c282e3dd5d922cca1c4c7a.jpg"
+            alt="nooo"
+            width="400px"
+          />
+        );
+      }
+      ReactDOM.render(<Img />, document.querySelector("#root"));
+      //   function Selector() {
+      //     return (
+      //       <select name="cars">
+      //         <option value="1">Ferrari</option>
+      //         <option value="2">Lamborghini</option>
+      //         <option value="3">Aston Martin</option>
+      //         <option value="4">Mercedes</option>
+      //       </select>
+      //     );
+      //   }
+      //   ReactDOM.render(<Selector />, document.querySelector("#root2"));
+    </script>
+
+    <script
+      crossorigin=""
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin=""
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </body>
+</html>
