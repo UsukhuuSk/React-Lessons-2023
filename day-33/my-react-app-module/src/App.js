@@ -21,9 +21,9 @@ function App() {
           <Product3 />
           <Product4 />
           <ProductFunc />
-          <ProductFunc2 />
+          {/* <ProductFunc2 />
           <ProductFunc3 />
-          <ProductFunc4/>
+          <ProductFunc4/> */}
         </div>
       </header>
     </div>
