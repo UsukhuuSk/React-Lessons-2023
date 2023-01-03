@@ -16,7 +16,7 @@ function ProductFunc() {
           </svg>
           <p className="count">23</p>
         </div>
-        <p className="title">Supermajority:The Fantasy Congress League</p>
+        <p className="title">Supermajority: The Fantasy Congress League</p>
         <p>Earn points when your favorite politicians pass legislation.</p>
         <p className="submit">
           Submitted by:
