@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 15vmin;
+  height: 20vmin;
   pointer-events: none;
 }
 
@@ -25,27 +25,39 @@
 .App-link {
   color: #61dafb;
 }
-hr{
+hr {
   width: 100%;
   background-color: #282c34;
 }
-.productno1{
+.productno1, .productno2, .productno3, .productno4{
   display: flex;
-  padding: 30px;
 }
-.rightside{
-  padding-left:20px;
+.rightside {
+  padding-left: 20px;
   font-weight: 500;
 }
-.title{
+.title {
   color: #296df5;
   text-align: start;
 }
-.submit{
+.submit {
   text-align: start;
+  color: #ccc;
 }
-.submit-pic{
-  width: 30px;
-  border-radius: 50%;
-  margin-bottom: -8px;
+.submit-pic {
+  width: 50px;
+  margin-bottom: 0;
+  margin-left: 20px;
+}
+.upvotecount{
+  display: flex;
+}
+.count{
+  line-height: 34px;
+}
+svg{
+  color: #00587d;
+}
+.subsection{
+  display: flex;
 }
