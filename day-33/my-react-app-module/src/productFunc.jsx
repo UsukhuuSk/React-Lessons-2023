@@ -1,7 +1,9 @@
-function ProductFunc() {
+import products from "./Seed";
+
+function ProductFunc(props) {
   return (
     <div className="productno1">
-      <img src="images/yellow.png" className="App-logo" alt="logo" />
+      <img src={props.productImageUrl} className="App-logo" alt="logo" />
       <div className="rightside">
         <div className="upvotecount">
           <svg
@@ -14,15 +16,15 @@ function ProductFunc() {
           >
             <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
           </svg>
-          <p className="count">55</p>
+          <p className="count"> {props.votes}</p>
         </div>
-        <p className="title">Haught or Naught</p>
-        <p>High minded or absent-minded? You decide.</p>
+        <p className="title">{props.title}</p>
+        <p>{props.description}</p>
         <p className="submit">
           Submitted by:
           {
             <img
-              src="images/daniel.jpg"
+              src={props.submitterAvatarUrl}
               className="submit-pic rounded-circle"
             />
           }
