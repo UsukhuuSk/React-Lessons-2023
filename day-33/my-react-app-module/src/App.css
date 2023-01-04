@@ -4,14 +4,9 @@
 
 .App-logo {
   height: 20vmin;
-  pointer-events: none;
+  border-radius: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   display: flex;
