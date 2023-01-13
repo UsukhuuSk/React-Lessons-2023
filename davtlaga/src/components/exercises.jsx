@@ -15,6 +15,7 @@ export default function Exercises() {
   const a = [1, 2, 4, 5];
   const b = ["a", "b", "c", "d"];
 
+
   console.log(findNumberFromArray(a, 6));
   console.log(findNumberFromArray(a, 4));
   console.log(findNumberFromArray(b, "a"));
