@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import About from "./components/About";
 import Login from "./components/Login";
 import Register from "./components/Register";
@@ -13,11 +13,11 @@ function App() {
     <div className="App">
       <h1>Day-43-React-Route</h1>
       <div id="navbar">
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/login">Login</a>
-        <a href="/register">Register</a>
-        <a href="/feedback">Feedback</a>
+        <Link to={"/"}>Home</Link>
+        <Link to={"/about"}>About</Link>
+        <Link to={"/login"}>Login</Link>
+        <Link to={"/register"}>Register</Link>
+        <Link to={"/feedback"}>Feedback</Link>
       </div>
       <Routes>
         <Route exact path="/" element={<Home />} />

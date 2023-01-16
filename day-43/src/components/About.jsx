@@ -4,8 +4,8 @@ export default function About() {
   return (
     <div>
       <p>This is About page</p>
-      <a href="about/usukhuu">Usukhuu</a>
-      <a href="about/khangai">Khangai</a>
+      <a href="/about/usukhuu">Usukhuu</a>
+      <a href="/about/khangai">Khangai</a>
       <Outlet />
     </div>
   );
