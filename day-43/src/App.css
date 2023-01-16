@@ -36,7 +36,17 @@
     transform: rotate(360deg);
   }
 }
-h1{
+h1 {
   text-align: center;
   background: #61dafb;
+}
+a {
+  text-decoration: none;
+  margin: 80px;
+  color: #fff;
+  background: #003f62;
+  padding: 5px;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
