@@ -23,6 +23,8 @@ export default function Index() {
         </Link>
         <Link to={"/accordion"}>Accordion</Link>
         <Link to={"/movies"}>Movies Page</Link>
+        <Link to={"/gallery"}>Image gallery page</Link>
+        <Link to={"/toast"}>Toaster</Link>
       </div>
     </div>
   );
