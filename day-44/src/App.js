@@ -8,6 +8,8 @@ import Index from "./components/Index";
 import Movies from "./components/Movies";
 import movieData from "./data/Movies";
 import Movie from "./components/Movie";
+import GalleryPage from "./components/GalleryPage";
+import ToasterPage from "./components/ToasterPage";
 function App() {
   return (
     <div className="App">
@@ -18,6 +20,8 @@ function App() {
         <Route path={"/accordion"} element={<Accordion />} />
         <Route path={"/movies"} element={<Movies />} />
         <Route path={"/movie/:id"} element={<Movie />} />
+        <Route path={"/gallery"} element={<GalleryPage />} />
+        <Route path={"/toast"} element={<ToasterPage />} />
       </Routes>
     </div>
   );

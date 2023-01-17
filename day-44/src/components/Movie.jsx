@@ -8,17 +8,16 @@ export default function Movie() {
   return (
     <div>
       <h1>Movie Detail Page {id}</h1>
-      {movie &&
-        movie.map((m, idx) => {
-          return (
-            <div key={idx}>
-              <p>{m.name}</p>
-              <p>{m.id}</p>
-              <p>{m.ISBN}</p>
-              <p>{m.genre}</p>
-            </div>
-          );
-        })}
+      {movie.map((m, idx) => {
+        return (
+          <div key={idx}>
+            <p>{m.name}</p>
+            <p>{m.id}</p>
+            <p>{m.ISBN}</p>
+            <p>{m.genre}</p>
+          </div>
+        );
+      })}
       {/* <div>{location.state.id}</div>
       <div>{location.state.name}</div>
       <div>{location.state.ISBN}</div> */}
