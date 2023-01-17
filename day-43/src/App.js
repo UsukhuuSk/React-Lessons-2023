@@ -20,7 +20,7 @@ function App() {
         <Link to={"/feedback"}>Feedback</Link>
       </div>
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/about/*" element={<About />}>
           <Route path="usukhuu" element={<Usukhuu />} />
           <Route path="khangai" element={<Khangai />} />
