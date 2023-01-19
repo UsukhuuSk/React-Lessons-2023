@@ -16,7 +16,6 @@ export default function Header() {
         <Link
           to={"/register"}
           className={activeIndex === 1 ? "active" : ""}
-          className="active"
           onClick={() => {
             setActiveIndex(1);
           }}
@@ -26,7 +25,6 @@ export default function Header() {
         <Link
           to={"/accordion"}
           className={activeIndex === 2 ? "active" : ""}
-          className="active"
           onClick={() => {
             setActiveIndex(2);
           }}
