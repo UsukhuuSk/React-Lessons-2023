@@ -3,6 +3,7 @@ export default function TimerActionButton({
   isTimerRunning,
   onStartClick,
   onStopClick,
+  handleStart,
 }) {
   return (
     <div>
@@ -11,7 +12,7 @@ export default function TimerActionButton({
           color={"error"}
           fullWidth={true}
           variant={"outlined"}
-          onClick={onStopClick}
+          onClick={(onStopClick, handleStart)}
         >
           Stop
         </Button>
@@ -20,7 +21,7 @@ export default function TimerActionButton({
           color={"success"}
           fullWidth={true}
           variant={"outlined"}
-          onClick={onStartClick}
+          onClick={(onStartClick, handleStart)}
         >
           Start
         </Button>
