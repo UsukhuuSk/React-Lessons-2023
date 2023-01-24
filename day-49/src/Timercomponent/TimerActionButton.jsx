@@ -12,7 +12,7 @@ export default function TimerActionButton({
           color={"error"}
           fullWidth={true}
           variant={"outlined"}
-          onClick={(onStopClick, handleStart)}
+          onClick={onStopClick}
         >
           Stop
         </Button>
