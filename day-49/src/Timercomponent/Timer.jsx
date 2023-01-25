@@ -5,6 +5,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import ModeEditIcon from "@mui/icons-material/ModeEdit";
 import TimerActionButton from "./TimerActionButton";
 import { renderElapsedString } from "./Helpers";
+import { useState } from "react";
 
 export default function Timer({
   id,
@@ -15,17 +16,24 @@ export default function Timer({
   onTrashClick,
   onStartClick,
   onStopClick,
+  onFormSubmit,
+  onEditClick,
 }) {
   const timer = renderElapsedString(elapsed, runningSince);
   function handleDelete() {
     onTrashClick(id);
   }
+  function handleEditClick() {
+    onEditClick(id);
+  }
   function handleStartClick() {
     onStartClick(id);
   }
+
   function handleStopClick() {
     onStopClick(id);
   }
+
   return (
     <Container maxWidth="sm">
       <Card
@@ -65,7 +73,7 @@ export default function Timer({
           }}
         >
           <DeleteIcon onClick={handleDelete} />
-          <ModeEditIcon />
+          <ModeEditIcon onClick={handleEditClick} />
         </Box>
         <TimerActionButton
           isTimerRunning={runningSince}
