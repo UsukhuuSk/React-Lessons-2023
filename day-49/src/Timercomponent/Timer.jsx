@@ -14,6 +14,7 @@ export default function Timer({
   runningSince,
   onTrashClick,
   onStartClick,
+  onStopClick,
 }) {
   const timer = renderElapsedString(elapsed, runningSince);
   function handleDelete() {
@@ -21,6 +22,9 @@ export default function Timer({
   }
   function handleStartClick() {
     onStartClick(id);
+  }
+  function handleStopClick() {
+    onStopClick(id);
   }
   return (
     <Container maxWidth="sm">
@@ -66,9 +70,7 @@ export default function Timer({
         <TimerActionButton
           isTimerRunning={runningSince}
           onStartClick={handleStartClick}
-          onStopClick={() => {
-            console.log("stop");
-          }}
+          onStopClick={handleStopClick}
         />
       </Card>
     </Container>
