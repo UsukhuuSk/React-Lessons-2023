@@ -1,29 +1,50 @@
 import { useEffect, useState } from "react";
 import timerData from "../data/data";
-import Timer from "./Timer";
+import EditableTimerList from "./EditableTimerList";
 import TimerForm from "./TimerForm";
 export default function TimerDashboard() {
-  console.log(timerData);
-  const [saveData, setSaveData] = useState([]);
+  const [timers, setTimers] = useState({ timers: [] });
   useEffect(() => {
-    setSaveData(timerData);
-  }, [saveData]);
+    setInterval(() => setTimers({ timers: timerData }), 1000);
+  }, []);
+  function handleStartClick(timerId) {
+    startTimer(timerId);
+  }
+  function startTimer(timerId) {
+    const now = Date.now();
+
+    setTimers({
+      timers: timers.timers.map((timer) => {
+        if (timer.id === timerId) {
+          timer.runningSince = now;
+          return timer;
+        } else {
+          return timer;
+        }
+      }),
+    });
+  }
+  function handleTrashClick(timerId) {
+    deleteTimer(timerId);
+  }
+  function deleteTimer(timerId) {
+    setTimers({
+      timers: timers.timers.filter((t) => t.id !== timerId),
+    });
+  }
   return (
     <div>
       <h1>Timers</h1>
-      {timerData &&
-        timerData.map((data, index) => {
-          return (
-            <Timer
-              key={index}
-              title={data.title}
-              project={data.project}
-              elapsed={data.elapsed}
-              runningSince={data.runningSince}
-            />
-          );
-        })}
-      <TimerForm title={"Title"} project={"Project"} />
+      {timers.timers && (
+        <div>
+          <EditableTimerList
+            timers={timers.timers}
+            onTrashClick={handleTrashClick}
+            onStartClick={handleStartClick}
+          />
+        </div>
+      )}
+      <TimerForm />
     </div>
   );
 }
