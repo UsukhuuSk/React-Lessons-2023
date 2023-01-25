@@ -10,6 +10,22 @@ export default function TimerDashboard() {
   function handleStartClick(timerId) {
     startTimer(timerId);
   }
+  function handleStopClick(timerId) {
+    stopTimer(timerId);
+  }
+  function stopTimer(timerId) {
+    const now = Date.now();
+    setTimers({
+      timers: timers.timers.map((timer) => {
+        if (timer.id === timerId) {
+          const lastElapsed = now - timer.runningSince;
+          timer.elapsed = timer.elapsed + lastElapsed;
+          timer.runningSince = null;
+        }
+        return timer;
+      }),
+    });
+  }
   function startTimer(timerId) {
     const now = Date.now();
 
@@ -41,6 +57,7 @@ export default function TimerDashboard() {
             timers={timers.timers}
             onTrashClick={handleTrashClick}
             onStartClick={handleStartClick}
+            onStopClick={handleStopClick}
           />
         </div>
       )}
