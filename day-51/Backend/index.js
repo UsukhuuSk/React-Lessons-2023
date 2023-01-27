@@ -21,14 +21,6 @@ let data = [
   },
 ];
 
-app.delete("/data", (request, response) => {
-  console.log(request.body);
-  const newData = data.filter((d) => d.id !== request.body.id);
-  data = newData;
-  console.log(data);
-  response.json(data);
-});
-
 app.get("/", (request, response) => {
   response.send("Here i am, a brutally powerful Express Server");
 });
@@ -40,12 +32,29 @@ app.get("/data", (request, response) => {
 app.post("/data", (request, response) => {
   console.log(request.body);
   const length = data.length;
-  const newData = {
+  const requestData = {
     id: length + 1,
     name: request.body.name,
     major: request.body.major,
   };
-  data.push(newData);
+  data = [...data, requestData];
+  data.push(requestData);
+  response.json(data);
+});
+
+app.delete("/data", (request, response) => {
+  const deletedData = data.filter((d) => d.id !== request.body.id);
+  data = deletedData;
+  response.json(data);
+});
+
+app.put("/data", (request, response) => {
+  const found = data.filter((d) => d.id === request.body.id);
+  console.log(found);
+  console.log(request.body);
+  console.log(data);
+
+  data = [...found, request.body];
   response.json(data);
 });
 
