@@ -61,11 +61,11 @@ app.get("/users", (request, response) => {
   });
 });
 
-app.post("/users", (request, response) => {
+app.put("/users", (request, response) => {
   const body = request.body;
   console.log(body);
 
-  const newUser = {
+  const newTimer = {
     id: Date.now().toString(),
     username: body.username,
     age: body.age,
@@ -81,7 +81,7 @@ app.post("/users", (request, response) => {
     const dataObject = JSON.parse(readData);
     console.log(dataObject);
     console.log("======");
-    dataObject.push(newUser);
+    dataObject.push(newTimer);
     console.log(dataObject);
 
     fs.writeFile(
