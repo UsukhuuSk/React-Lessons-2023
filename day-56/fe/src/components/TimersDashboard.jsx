@@ -103,17 +103,14 @@ export default function TimersDashboard() {
     });
   }
 
-  async function updateTimer(attrs) {
-    setTimers({
-      timers: timers.timers.map((timer) => {
-        if (timer.id === attrs.id) {
-          timer.title = attrs.title;
-          timer.project = attrs.project;
-          timer.elapsed = attrs.elapsed;
-        }
-        return timer;
-      }),
-    });
+  async function updateTimer(e) {
+    const options = {
+      method: "PUT",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(e),
+    };
     const FETCHED_DATA = await fetch(URL, options);
     const FETCHED_JSON = await FETCHED_DATA.json();
     setTimers({ timers: FETCHED_JSON.data });
