@@ -1,1 +1,10 @@
-[{"firstname":"d","lastname":"d","email":"d","password":"d","address":"d","role":{"id":1,"name":"Admin"}},{"firstname":"add","lastname":"dq","email":"dadjwao ijd","password":"jdo","address":"jo","role":{"id":2,"name":"User"}},{"firstname":"HI","lastname":"HI","email":"HI","password":"HI","address":"HI","role":{"id":3,"name":"Customer"}}]
+[
+  {
+    "firstname": "Usukhuu",
+    "lastname": "T",
+    "email": "Usukhuumz12@gmail.com",
+    "password": "$2b$10$zKHO7B.1zovMzAA0oDx1puZstMsGLlJ9gmF6tNCkcNkmwfkM/tnhW",
+    "address": "IDK",
+    "role": { "id": 1, "name": "Admin" }
+  }
+]
