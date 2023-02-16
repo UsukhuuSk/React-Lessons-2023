@@ -12,6 +12,7 @@ export default function CategoryForm() {
       },
       body: JSON.stringify({
         catName: e.target.catName.value,
+        isEdit: false,
       }),
     };
     const FETCHED_DATA = await fetch(URL, options);
