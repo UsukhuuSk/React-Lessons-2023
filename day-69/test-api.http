@@ -3,6 +3,10 @@ Content-Type: application/json
 
 ###
 
+GET http://localhost:8080/api/search?keyword=camera HTTP/1.1
+Content-Type: application/json
+
+###s
 POST http://localhost:8080/employee HTTP/1.1
 Content-Type: application/json
 
@@ -25,13 +29,8 @@ Content-Type: application/json
 
 ###
 
-PUT http://localhost:8080/employee HTTP/1.1
+PUT http://localhost:8080/ HTTP/1.1
 Content-Type: application/json
 
-{
-    "empNo": 500005,
-    "lastName": "Guy with a wig",
-    "gender": "M"
-}
 
 ###
