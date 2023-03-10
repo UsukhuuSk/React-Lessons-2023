@@ -1,5 +1,5 @@
 import express, { response } from "express";
-const emp_router = express.Router();
+const admin = express.Router();
 import {
   getEmployees,
   hireEmployee,
@@ -7,26 +7,25 @@ import {
   fireEmployee,
   updateEmployee,
 } from "../services/employee-services.js";
-import { getPopularCategories } from "../services/category-services.js";
 
-emp_router.get("/employees", async (request, response) => {
+admin.get("/employees", async (request, response) => {
   const result = await getEmployees();
   console.log(result);
   response.status(200).send(result);
 });
-emp_router.put("/employee", async (request, response) => {
+admin.put("/employee", async (request, response) => {
   const body = request.body;
   console.log(body);
   const result = await updateEmployee(body.empNo, body.lastName, body.gender);
   response.status(200).send(result);
 });
-emp_router.delete("/employee", async (request, response) => {
+admin.delete("/employee", async (request, response) => {
   const body = request.body;
   console.log(body);
   const result = await fireEmployee(body.empNo);
   response.status(200).send(result);
 });
-emp_router.post("/employee", async (request, response) => {
+admin.post("/employee", async (request, response) => {
   const { birthDate, firstName, lastName, gender, hireDate } = request.body;
 
   const { max } = await getMaxNo();
@@ -41,4 +40,4 @@ emp_router.post("/employee", async (request, response) => {
   console.log(result);
   response.status(200).send({});
 });
-export default emp_router;
+export default admin;
