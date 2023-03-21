@@ -1,0 +1,36 @@
+POST http://localhost:8080/todo/create HTTP/1.1
+Content-Type: application/json
+
+    {
+        "name":"Washing Dishes",
+        "checked": false,
+        "category": "64192cbd649874330660c23b"
+    }
+
+###
+
+PUT http://localhost:8080/update HTTP/1.1
+Content-Type: application/json
+
+[
+    {"checked":true },
+    {"name":"bathing Kids "}
+]
+
+###
+
+
+DELETE http://localhost:8080/todo/delete HTTP/1.1
+Content-Type: application/json
+
+{
+        "name":"Washing Dishes",
+        "checked": false
+}
+
+###
+
+GET http://localhost:8080/todo/list HTTP/1.1
+Content-Type: application/json
+
+
