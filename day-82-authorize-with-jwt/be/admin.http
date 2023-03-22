@@ -1,0 +1,21 @@
+POST http://localhost:8080/admin/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "hello18@gmail.com",
+    "password": "12345678"
+}
+
+###
+
+POST http://localhost:8080/admin/login HTTP/1.1
+Content-Type: application/json
+
+    {
+        "email": "hello18@gmail.com",
+        "password":"12345678"
+    }
+
+###
+
+
