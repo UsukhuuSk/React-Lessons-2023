@@ -3,31 +3,48 @@ const Users = require("../models/users");
 const adminRouter = express.Router();
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const UserRole = require("../models/userRole");
 
 adminRouter.post("/register", async (request, response) => {
-  const { email, password } = request.body;
-  if (email && password) {
-    const oldUser = await Users.findOne({ email });
-    if (oldUser !== null) {
-      return response.json({ error: "Already registered" });
-    } else {
-      const hashedPassword = await bcrypt.hash(password, 10);
-
-      Users.create({ email: email, password: hashedPassword })
-        .then((data) => {
-          response.status(201).json({
-            message: "Хэрэглэгч амжилттай үүслээ.",
-            email: data.email,
-          });
-          return;
-        })
-        .catch((error) => {
-          response.status(500).json({
-            success: false,
-            error,
-          });
-        });
+  const data = request.body;
+  console.log(data);
+  if (data) {
+    const oldUser = await Users.findOne({ email: data.email });
+    if (oldUser) {
+      return response
+        .status(400)
+        .json({ success: false, status: "Already registered,Please log in" });
     }
+    const hashedPassword = await bcrypt.hash(data.password, 10);
+    data.password = hashedPassword;
+    try {
+      const user = await Users.create(data);
+      const result = await user.populate("UserRole");
+      response.status(201).json({
+        message: "Successfully registered",
+        data: result,
+      });
+    } catch (error) {
+      response.status(500).json({
+        success: false,
+        error: error,
+      });
+    }
+
+    // Users.create(data)
+    //   .then((data) => {
+    //     response.status(201).json({
+    //       message: "Хэрэглэгч амжилттай үүслээ.",
+    //       data,
+    //     });
+    //     return;
+    //   })
+    //   .catch((error) => {
+    //     response.status(500).json({
+    //       success: false,
+    //       error: error,
+    //     });
+    //   });
   } else {
     return response.json({ error: "Input field is empty" });
   }
@@ -59,5 +76,18 @@ adminRouter.post("/login", async (request, response) => {
       error: error,
     });
   }
+});
+adminRouter.get("/role/list", async (req, res) => {
+  const result = await UserRole.find({});
+  res.status(200).json({
+    data: result,
+  });
+});
+adminRouter.post("/role/create", async (req, res) => {
+  const { name } = req.body;
+  const result = await UserRole.create({ name });
+  res.status(200).json({
+    data: result,
+  });
 });
 module.exports = adminRouter;
