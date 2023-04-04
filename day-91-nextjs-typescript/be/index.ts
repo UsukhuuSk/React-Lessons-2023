@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import theaterRouter from "./routes/theaters.api";
 import cors from "cors";
+import movieRouter from "./routes/movies.api";
 dotenv.config();
 
 const app: Express = express();
@@ -30,6 +31,7 @@ interface Student {
 app.use(express.json());
 app.use(cors());
 app.use("/theaters", theaterRouter);
+app.use("/movies", movieRouter);
 
 app.get("/", (req: Request, res: Response) => {
   res.status(200).send(name);
