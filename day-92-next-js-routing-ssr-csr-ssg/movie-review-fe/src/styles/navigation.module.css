@@ -1,4 +1,8 @@
-.container {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+
+ .container {
   width: 1100px;
   background-color: #fa320a;
   display: flex;
@@ -26,6 +30,7 @@
   padding: 10px 10px 15px 10px;
   display: flex;
   color: #fff;
+
 }
 .icon {
   width: 15px;
@@ -38,27 +43,33 @@
   font-size: 16px;
 }
 .topbtns {
-  margin-left: 465px;
+  margin-left: 480px;
   margin-top: 10px;
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
 }
 .topbtns > a {
   padding-right: 20px;
 }
 .botbtns {
-  padding-left: 360px;
-  padding-top: 30px;
-  font-weight: 600;
+  padding-left: 395px;
+  padding-top: 40px;
+  font-weight: 500;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
 }
 .botbtns > a {
-  padding-right: 15px;
+  padding-right: 20px;
 }
 
 .botbtns > a:hover {
   background-color: #fff;
-  border-radius: 20px;
-  height: auto;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 5px;
   color: #000;
 }
 
