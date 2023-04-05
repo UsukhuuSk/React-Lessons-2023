@@ -22,7 +22,7 @@
   padding-left: 20px;
   position: absolute;
 }
-.search > a {
+.search > Link{
   padding: 10px 10px 15px 10px;
   display: flex;
   color: #fff;
@@ -43,7 +43,7 @@
   font-size: 15px;
   font-weight: 600;
 }
-.topbtns > a {
+.topbtns > Link {
   padding-right: 20px;
 }
 .botbtns {
@@ -51,11 +51,11 @@
   padding-top: 30px;
   font-weight: 600;
 }
-.botbtns > a {
+.botbtns > Link{
   padding-right: 15px;
 }
 
-.botbtns > a:hover {
+.botbtns > Link:hover {
   background-color: #fff;
   border-radius: 20px;
   height: auto;

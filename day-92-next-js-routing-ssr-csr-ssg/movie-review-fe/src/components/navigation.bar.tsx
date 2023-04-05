@@ -1,4 +1,5 @@
 import styles from "@/styles/navigation.module.css";
+import Link from "next/link";
 import React from "react";
 
 export default function NavigationBar(): JSX.Element {
@@ -9,7 +10,7 @@ export default function NavigationBar(): JSX.Element {
         alt="logo"
       />
       <div className={styles.search}>
-        <a href="">
+        <Link href="">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -24,21 +25,21 @@ export default function NavigationBar(): JSX.Element {
               d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
             />
           </svg>
-        </a>
+        </Link>
         <input type="text" placeholder="Search movies, TV, actors, more..." />
       </div>
       <div className={styles.outer}>
         <div className={styles.topbtns}>
-          <a href="">What's the Tomatometer®?</a>
-          <a href="">Critics</a>
-          <a href="">LOGIN/SIGNUP</a>
+          <Link href="">What's the Tomatometer®?</Link>
+          <Link href="">Critics</Link>
+          <Link href="">LOGIN/SIGNUP</Link>
         </div>
         <div className={styles.botbtns}>
-          <a href="">MOVIES</a>
-          <a href="">TV SHOWS</a>
-          <a href="">MOVIE TRIVIA</a>
-          <a href="">NEWS</a>
-          <a href="">SHOWTIMES</a>
+          <Link href="">MOVIES</Link>
+          <Link href="">TV SHOWS</Link>
+          <Link href="">MOVIE TRIVIA</Link>
+          <Link href="">NEWS</Link>
+          <Link href="">SHOWTIMES</Link>
         </div>
       </div>
     </div>
