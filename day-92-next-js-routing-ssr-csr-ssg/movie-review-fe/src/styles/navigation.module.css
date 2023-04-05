@@ -1,0 +1,67 @@
+.container {
+  width: 1100px;
+  background-color: #fa320a;
+  display: flex;
+}
+.container > img {
+  width: 200px;
+  padding: 25px 22px 25px;
+}
+
+.search {
+  display: flex;
+}
+.search > input {
+  height: 34px;
+  width: 380px;
+  border-radius: 20px;
+  border: 1px solid#fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  margin-top: 30px;
+
+  padding-left: 20px;
+  position: absolute;
+}
+.search > a {
+  padding: 10px 10px 15px 10px;
+  display: flex;
+  color: #fff;
+}
+.icon {
+  width: 15px;
+  position: relative;
+}
+
+.search > input::placeholder {
+  color: white;
+  padding-left: 10px;
+  font-size: 16px;
+}
+.topbtns {
+  margin-left: 465px;
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.topbtns > a {
+  padding-right: 20px;
+}
+.botbtns {
+  padding-left: 360px;
+  padding-top: 30px;
+  font-weight: 600;
+}
+.botbtns > a {
+  padding-right: 15px;
+}
+
+.botbtns > a:hover {
+  background-color: #fff;
+  border-radius: 20px;
+  height: auto;
+  color: #000;
+}
+
+.outer {
+  display: inline-block;
+}
