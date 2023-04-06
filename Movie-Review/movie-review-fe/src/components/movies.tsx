@@ -14,7 +14,7 @@ export default function Movies(): JSX.Element {
   return (
     <div className="flex flex-wrap max-w-screen-lg justify-around ">
       {movies.map((movie, index) => (
-        <div key={index} className="gap-72  flex flex-wrap w-40">
+        <div key={index} className=" flex flex-wrap w-40">
           <img src={movie.poster} alt="poster" className="" />
         </div>
       ))}
