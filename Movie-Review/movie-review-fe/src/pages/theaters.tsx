@@ -31,7 +31,7 @@ interface ITheater {
 export default function Theaters(): JSX.Element {
   const [theaters, setTheaters] = useState<ITheater[]>([]);
   async function fetchTheaters(): Promise<void> {
-    const FETCHED_DATA = await fetch("http://localhost:8080/theaters/list");
+    const FETCHED_DATA = await fetch("http://localhost:8181/theaters/list");
     const FETCHED_JSON = await FETCHED_DATA.json();
     setTheaters(FETCHED_JSON);
   }

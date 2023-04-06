@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 
-.container {
+.wrap {
   width: 1100px;
+}
+.container {
   background-color: #fa320a;
   display: flex;
 }
@@ -20,9 +23,7 @@
   border: 1px solid#fff;
   background-color: rgba(0, 0, 0, 0.4);
   margin-top: 30px;
-
   padding-left: 20px;
-  position: absolute;
 }
 .search > a {
   padding: 10px 10px 15px 10px;
@@ -31,7 +32,9 @@
 }
 .icon {
   width: 15px;
-  position: relative;
+  margin-top: 30px;
+  margin-left: 20px;
+  position: absolute;
 }
 
 .search > input::placeholder {
@@ -40,7 +43,7 @@
   font-size: 16px;
 }
 .topbtns {
-  margin-left: 480px;
+  margin-left: 140px;
   margin-top: 10px;
   font-size: 13px;
   font-weight: 500;
@@ -50,8 +53,8 @@
   padding-right: 20px;
 }
 .botbtns {
-  padding-left: 395px;
-  padding-top: 40px;
+  margin-left: 50px;
+  padding-top: 35px;
   font-weight: 500;
   font-size: 14px;
   font-family: "Roboto", sans-serif;
@@ -72,4 +75,33 @@
 
 .outer {
   display: inline-block;
+}
+.trend {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 3px;
+  justify-content: space-between;
+}
+.trendtitle {
+  color: #ffe400;
+  padding-left: 4px;
+  font-size: 14px;
+  letter-spacing: 0.055em;
+  font-family: "Poppins" sans-serif;
+}
+
+.trendtxt {
+  color: #fff;
+  font-size: 14px;
+  padding-left: 10px;
+}
+.out {
+  display: flex;
+}
+.icons {
+  display: flex;
+  margin-right: 10px;
+}
+.icons > a {
+  padding: 5px;
 }
