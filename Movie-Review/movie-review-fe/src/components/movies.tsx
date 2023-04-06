@@ -7,6 +7,7 @@ export default function Movies(): JSX.Element {
     const FETCHED_DATA = await fetch("http://localhost:8080/movies/list");
     const FETCHED_JSON = await FETCHED_DATA.json();
     setMovies(FETCHED_JSON);
+    console.log("testgit");
   }
   useEffect(() => {
     fetchMovies();
