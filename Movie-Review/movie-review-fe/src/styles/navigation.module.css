@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+.container {
+  width: 1100px;
+  background-color: #fa320a;
+  display: flex;
+}
+.container > img {
+  width: 200px;
+  padding: 25px 22px 25px;
+}
+
+.search {
+  display: flex;
+}
+.search > input {
+  height: 34px;
+  width: 380px;
+  border-radius: 20px;
+  border: 1px solid#fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  margin-top: 30px;
+
+  padding-left: 20px;
+  position: absolute;
+}
+.search > a {
+  padding: 10px 10px 15px 10px;
+  display: flex;
+  color: #fff;
+}
+.icon {
+  width: 15px;
+  position: relative;
+}
+
+.search > input::placeholder {
+  color: white;
+  padding-left: 10px;
+  font-size: 16px;
+}
+.topbtns {
+  margin-left: 480px;
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+}
+.topbtns > a {
+  padding-right: 20px;
+}
+.botbtns {
+  padding-left: 395px;
+  padding-top: 40px;
+  font-weight: 500;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+}
+.botbtns > a {
+  padding-right: 20px;
+}
+
+.botbtns > a:hover {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 5px;
+  color: #000;
+}
+
+.outer {
+  display: inline-block;
+}
