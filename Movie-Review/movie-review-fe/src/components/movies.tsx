@@ -16,7 +16,7 @@ export default function Movies(): JSX.Element {
       {movies.map((movie, index) => (
         <div key={index} className=" flex flex-wrap w-1/5 px-3 pb-9 pt-4">
           <img src={movie.poster} alt="poster" className="h-full rounded" />
-          <p className="text-black text-xs ">{movie.title}</p>
+          <p className="text-white text-xs">{movie.title}</p>
         </div>
       ))}
     </div>
