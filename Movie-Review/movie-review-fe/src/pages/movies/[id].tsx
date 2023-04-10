@@ -62,7 +62,7 @@ export default function Movies({ data }: { data: any }): JSX.Element {
     <div>
       <div className={styles.main}>
         <NavigationBar />
-        <div className="text-black max-w-screen-xl">
+        <div className="text-black w-[1100px]">
           <div className="flex">
             <img
               src={
@@ -146,7 +146,6 @@ export default function Movies({ data }: { data: any }): JSX.Element {
               </p>
             </div>
           </div>
-          <div></div>
         </div>
       </div>
     </div>
