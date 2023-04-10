@@ -27,7 +27,7 @@ export default function Movies(): JSX.Element {
   };
 
   return (
-    <div>
+    <div className="">
       <div className=" flex justify-between flex-wrap w-px   bg-white ">
         {movies.map((movie, index) => (
           <div key={index} className="flex flex-wrap w-1/5  p-2">
