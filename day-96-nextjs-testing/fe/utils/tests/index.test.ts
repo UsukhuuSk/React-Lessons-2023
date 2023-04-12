@@ -43,6 +43,6 @@ describe("composeArticleSlug", () => {
 
 describe("extractArticleIdFromSlug", () => {
   it("should do something", () => {
-    expect(extractArticleIdFromSlug(str7)).toBe("ya");
+    expect(extractArticleIdFromSlug(str7)).toBe("ya ");
   });
 });
