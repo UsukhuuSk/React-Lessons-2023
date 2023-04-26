@@ -22,12 +22,16 @@ export class TodosService {
     return result;
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} todo`;
+  async findOne(id: string): Promise<Todo> {
+    const todo = await this.todoModel.findById(id);
+    return todo;
   }
 
-  async update(id: string, updateTodoDto: UpdateTodoDto) {
-    const result = await this.todoModel.findByIdAndUpdate({ _id: id });
+  async update(id: string, updateTodoDto: UpdateTodoDto): Promise<Todo> {
+    const result = await this.todoModel.findOneAndUpdate(
+      { _id: id },
+      updateTodoDto,
+    );
     return result;
   }
 
